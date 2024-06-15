@@ -61,6 +61,12 @@
   font-weight: 400;
   font-size: toRem(16);
   line-height: 135%;
+
+  p {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 20, 15);
+    }
+  }
 }
 
 .navigation {

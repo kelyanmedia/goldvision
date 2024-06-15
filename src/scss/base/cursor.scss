@@ -1,69 +1,102 @@
 * {
-	cursor: none !important;
+  //   cursor: none !important;
 }
 .fls-cursor {
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	left: 0;
-	top: 0;
-	pointer-events: none;
-	&__shadow {
-		will-change: transform;
-		transition: all 0.05s linear 0s;
-		position: fixed;
-		width: toRem(50);
-		height: toRem(50);
-		&::after {
-			content: "";
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			border: 3px solid #000;
-			animation: rotate 5s infinite linear;
-			@keyframes rotate {
-				0% {
-					transform: rotate(0deg);
-				}
-				100% {
-					transform: rotate(-360deg);
-				}
-			}
-		}
-	}
-	&__pointer {
-		position: fixed;
-		width: toRem(3);
-		height: toRem(3);
-		top: 0;
-		left: 0;
-		&::after {
-			content: "";
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			border: 3px solid #000;
-			transition: all 0.3s ease 0s;
-			border-radius: 50%;
-		}
-	}
-	&._hover {
-		.fls-cursor__pointer::after {
-			transform: scale(0.8);
-		}
-		.fls-cursor__shadow::after {
-		}
-	}
-	&._active {
-		.fls-cursor__pointer::after {
-			transition: all 0.05s ease 0s;
-			transform: scale(0.3);
-		}
-		.fls-cursor__shadow::after {
-		}
-	}
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  opacity: 0;
+  &__shadow {
+    will-change: transform;
+    transition: all 0.05s linear 0s;
+    position: fixed;
+    @include adaptiveValue("width", 100, 80);
+    @include adaptiveValue("height", 100, 80);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: toRem(15);
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    &::after {
+      content: "\e905";
+      @extend %ic;
+      @include adaptiveValue("font-size", 45, 37);
+      background: linear-gradient(90deg, #ae8625 0%, #f7e78a 23.61%, #d2a742 54.5%, #f7e78a 78%, #eed967 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      //   position: absolute;
+      //   width: 100%;
+      //   height: 100%;
+      //   top: 0;
+      //   left: 0;
+      //   border: 3px solid #000;
+      //   animation: rotate 5s infinite linear;
+      //   @keyframes rotate {
+      //     0% {
+      //       transform: rotate(0deg);
+      //     }
+      //     100% {
+      //       transform: rotate(-360deg);
+      //     }
+      //   }
+    }
+  }
+  &__pointer {
+    // position: fixed;
+    // width: toRem(3);
+    // height: toRem(3);
+    // top: 0;
+    // left: 0;
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 100%;
+    //   top: 0;
+    //   left: 0;
+    //   border: 3px solid #000;
+    //   transition: all 0.3s ease 0s;
+    //   border-radius: 50%;
+    // }
+  }
+  &._hover {
+    .fls-cursor__pointer::after {
+      transform: scale(0.8);
+    }
+    .fls-cursor__shadow::after {
+    }
+  }
+  &._video {
+    opacity: 1;
+    .fls-cursor__pointer::after {
+      // transform: scale(0.8);
+    }
+    .fls-cursor__shadow::after {
+    }
+  }
+  &._active {
+    .fls-cursor__pointer::after {
+      //   transition: all 0.05s ease 0s;
+      //   transform: scale(0.3);
+    }
+    .fls-cursor__shadow::before {
+      transition: all 0.05s ease 0s;
+      transform: scale(0.9);
+    }
+  }
 }
