@@ -190,7 +190,17 @@
   }
 
   &__slide-ibg {
-    aspect-ratio: 360 / 500;
+    padding-bottom: percent(500, 1500);
+
+    @media (max-width: $tablet) {
+      padding-bottom: percent(400, 991);
+    }
+    @media (max-width: $mobile) {
+      padding-bottom: percent(400, 767);
+    }
+    @media (max-width: em(660)) {
+      padding-bottom: percent(500, 660);
+    }
   }
   &__navigation {
     justify-content: center;
