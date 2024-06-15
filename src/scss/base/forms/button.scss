@@ -2,13 +2,30 @@
 // Сніппет (HTML): btn
 
 .button {
-	display: inline-flex;
-	padding: 0px 0px;
-	@media (any-hover: hover) {
-		&:hover {
-		}
-	}
-	&--fw {
-		width: 100%;
-	}
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: toRem(10) toRem(20);
+
+  font-family: "Century Gothic";
+  font-weight: 400;
+  font-size: toRem(16);
+  line-height: 125%;
+  color: #161616;
+
+  min-height: toRem(40);
+  background-image: linear-gradient(to right, #ae8625 0%, #f7e78a 23.61%, #d2a742 54.5%, #f7e78a 78%, #eed967 100%);
+  background-size: 175% 100%;
+
+  transition:
+    background-position 0.4s ease-in-out,
+    border-color 0.4s ease-in-out;
+  @media (any-hover: hover) {
+    &:hover {
+      background-position: 75% 0;
+    }
+  }
+  &--fw {
+    width: 100%;
+  }
 }

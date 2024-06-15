@@ -2,8 +2,133 @@
 
 //========================================================================================================================================================
 
-// .fancybox__container {
-//     max-width: none;
-// }
+.fancybox__container {
+  max-width: none;
+}
 
 //========================================================================================================================================================
+
+.title {
+  font-family: Panama;
+  font-weight: 400;
+  @include adaptiveValue("font-size", 80, 45);
+  line-height: 100%;
+  text-transform: uppercase;
+
+  &_center {
+    text-align: center;
+  }
+}
+
+.title-second {
+  font-family: Panama;
+  font-weight: 700;
+  @include adaptiveValue("font-size", 24, 20);
+  line-height: 120%;
+  text-transform: uppercase;
+
+  &_center {
+    text-align: center;
+  }
+}
+
+.navigate {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: toRem(7);
+  &__button {
+    padding: toRem(7) toRem(13);
+    min-height: toRem(30);
+
+    &:not(.active) {
+      background-image: none;
+      color: #fff;
+      border: 1px solid transparent;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-position: 0 0;
+        border-color: #ae8625;
+      }
+    }
+  }
+}
+
+.text {
+  font-weight: 400;
+  font-size: toRem(16);
+  line-height: 135%;
+}
+
+.navigation {
+  pointer-events: none;
+
+  display: flex;
+  gap: toRem(10);
+  &__button {
+    pointer-events: all;
+    @include adaptiveValue("width", 50, 40);
+    @include adaptiveValue("height", 50, 40);
+    border: toRem(1) solid #ae8625;
+    color: #ae8625;
+    @include adaptiveValue("font-size", 22, 20);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #ae8625;
+        color: #fff;
+      }
+    }
+  }
+}
+.button-prev {
+}
+.button-next {
+}
+
+//========================================================================================================================================================
+
+.play {
+  position: relative;
+  overflow: hidden;
+
+  @media (any-hover: hover) {
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+  img {
+    transition: all 0.3s ease 0s;
+  }
+
+  &::before {
+    content: "\e904";
+    @extend %ic;
+    @include adaptiveValue("font-size", 40, 20);
+    @include adaptiveValue("padding-left", 10, 5);
+
+    @include adaptiveValue("width", 100, 60);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+}
