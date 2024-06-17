@@ -91,6 +91,20 @@
   &__text {
   }
 
+  &__showmore {
+  }
+
+  &__more {
+    @include adaptiveValue("margin-top", 20, 15);
+    font-weight: 700;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
   &__image {
     height: fit-content;
     // padding-bottom: percent(747, 710);

@@ -93,10 +93,19 @@
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 50, 30);
     }
+
+    &_foto {
+      grid-template-columns: repeat(2, 1fr);
+      @media (min-width: $mobile) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   }
 
   &__item {
-    cursor: none;
+    &[data-video-cursor] {
+      cursor: none;
+    }
     padding-bottom: percent(340, 740);
 
     position: relative;
