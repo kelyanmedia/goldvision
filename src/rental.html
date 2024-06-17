@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="hero">
+                <div class="hero__container">
+                    <div class="hero__body">
+                        <h1 class="hero__title">Gold Vision Rental</h1>
+                        <p class="hero__subtitle title-second">Аренда техники для ваших проектов</p>
+
+                        <a href="#" class="hero__button button" data-popup="#popup">ОБСУДИТЬ ПРОЕКТ</a>
+                    </div>
+                </div>
+                <div class="hero__bg-ibg"><img src="@img/hero/01.jpg" alt=""></div>
+            </section>
+
+            <section class="quote">
+                <div class="quote__container">
+                    <h2 class="quote__title title">все необходимое для успешной реализации <br>
+                        вашего проекта</h2>
+                    <div class="quote__text text">
+                        <p>
+                            GOLD VISION - ваш надежный партнер в обеспечении профессиональной техники
+                            для вашего успешного мероприятия или проекта. Независимо от того, нужны ли вам оборудование для фото- или видеосъемки, звуковое оборудование, световое оборудование или любая другая специализированная техника, мы предлагаем широкий выбор высококачественного оборудования для аренды по доступным ценам.
+                        </p>
+
+                        <p>Мы предоставляем широкий спектр профессионального оборудования для аренды, чтобы помочь вам воплотить в жизнь любую идею. Независимо от того, является ли ваш проект корпоративным мероприятием, свадебной церемонией, фотосессией или киносъемкой, мы обеспечим вас качественным оборудованием и высококлассным сервисом.</p>
+                    </div>
+                </div>
+            </section>
+
+            @@include('html/_video.htm',{})
+
+            @@include('html/_equipment.htm',{})
+
+            @@include('html/_clients.htm',{})
+
+            @@include('html/_best.htm',{
+            "title":"Отзывы о нашем оборудовании"
+            })
+
+            @@include('html/_submit.htm',{})
+
+            @@include('html/_contacts.htm',{})
+
+            <!--
+				<section class="test">
+					<div class="test__container">
+						<div class="test__body">
+
+						</div>
+					</div>
+				</section>
+			-->
+
+        </main>
+        @@include('html/_footer.htm',{})
+        @@include('html/_popup.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

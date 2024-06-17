@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Фотосьемка"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="hero">
+                <div class="hero__container">
+                    <div class="hero__body">
+                        <h1 class="hero__title">фотосъемка</h1>
+
+                        <a href="#" class="hero__button button" data-popup="#popup">ОБСУДИТЬ ПРОЕКТ</a>
+                    </div>
+                </div>
+                <div class="hero__bg-ibg"><img src="@img/hero/01.jpg" alt=""></div>
+            </section>
+
+            <section class="directions">
+                <div class="directions__container">
+                    <h2 class="directions__title title title_center">полный спектр услуг фотосъемки</h2>
+                    <div class="directions__items step">
+                        <a href="#" class="directions__item item-directions">
+                            <h3 class="item-directions__title title-second">Высокое качество фотографий</h3>
+                            <div class="item-directions__text text">
+                                <p>Мы используем современное оборудование
+                                    и новейшие технологии, чтобы каждая фотография была максимально четкой и яркой. Наши снимки отличаются высоким разрешением и точной передачей цветов.</p>
+                            </div>
+                        </a>
+                        <a href="#" class="directions__item item-directions">
+                            <h3 class="item-directions__title title-second">Профессионализм фотографов</h3>
+                            <div class="item-directions__text text">
+                                <p>Наши фотографы — это опытные профессионалы, обладающие глубокими знаниями и навыками в области фотосъемки.
+                                    Они умеют ловить самые значимые моменты и создавать настоящие шедевры из каждого кадра.</p>
+                            </div>
+                        </a>
+                        <a href="#" class="directions__item item-directions">
+                            <h3 class="item-directions__title title-second">Индивидуальный подход </h3>
+                            <div class="item-directions__text text">
+                                <p>Внимательно прислушиваемся к вашим пожеланиям и требованиям. Наши услуги адаптируются под ваши нужды, будь то личная фотосессия, корпоративное мероприятие или семейный праздник.</p>
+                            </div>
+                        </a>
+                        <a href="#" class="directions__item item-directions">
+                            <h3 class="item-directions__title title-second">Креативные решения</h3>
+                            <div class="item-directions__text text">
+                                <p>Наша команда разрабатывает уникальные идеи для каждой фотосессии, чтобы ваши фотографии были не только качественными, но и креативными. Мы стремимся сделать каждый снимок особенным и неповторимым.</p>
+                            </div>
+                        </a>
+                        <a href="#" class="directions__item item-directions">
+                            <h3 class="item-directions__title title-second">Полный спектр услуг</h3>
+                            <div class="item-directions__text text">
+                                <p>От портретной и свадебной фотографии
+                                    до фотосъемки мероприятий и рекламных кампаний. Наши специалисты также занимаются постобработкой изображений, чтобы гарантировать идеальный результат.</p>
+                            </div>
+                        </a>
+                        <a href="#" class="directions__item item-directions">
+                            <h3 class="item-directions__title title-second">Быстрая готовность</h3>
+                            <div class="item-directions__text text">
+                                <p>Мы ценим ваше время, поэтому обеспечиваем быструю обработку и доставку готовых фотографий. Вы получите свои снимки в кратчайшие сроки, без ущерба для качества.</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+
+            @@include('html/_works.htm',{})
+
+            @@include('html/_submit.htm',{})
+
+            @@include('html/_contacts.htm',{})
+
+            <!--
+				<section class="test">
+					<div class="test__container">
+						<div class="test__body">
+
+						</div>
+					</div>
+				</section>
+			-->
+
+        </main>
+        @@include('html/_footer.htm',{})
+        @@include('html/_popup.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Услуги"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="hero">
+                <div class="hero__container">
+                    <div class="hero__body">
+                        <h1 class="hero__title">GOld vision group</h1>
+                        <p class="hero__subtitle title-second">ВИдеосъемка свадеб</p>
+
+                        <a href="#" class="hero__button button" data-popup="#popup">ОБСУДИТЬ ПРОЕКТ</a>
+                    </div>
+                </div>
+                <div class="hero__bg-ibg"><img src="@img/hero/01.jpg" alt=""></div>
+            </section>
+
+            <section class="text-block">
+                <div class="text-block__container">
+                    <div class="text-block__body">
+
+                        <h2 class="text-block__title title">каждая свадьба уникальна</h2>
+
+                        <div class="text-block__text text">
+                            <p>Этот день — результат долгих приготовлений и радостных ожиданий. Мы понимаем, насколько важен каждый миг этого особенного события, и стремимся сохранить его для вас на долгие годы.</p>
+                            <p>Наша команда профессионалов специализируется на видеосъемке свадеб, чтобы запечатлеть трогательные моменты, искренние улыбки и нежные взгляды, которые делают ваш день незабываемым. Мы создаем фильмы, которые позволят вам вновь и вновь переживать эти волшебные мгновения, разделяя их с родными и близкими.</p>
+                            <p>Мы не только обладаем профессиональными навыками и опытом в сфере свадебной съемки, но и уделяем особое внимание каждой паре. Мы гордимся тем, что наши клиенты становятся нашими друзьями, и делаем все возможное, чтобы ваш день прошел незабываемо.</p>
+                            <p>Доверьте нам сохранение воспоминаний о вашем свадебном дне. Мы позаботимся о том, чтобы каждый кадр отразил истинные чувства и эмоции, наполняющие ваше сердце в этот важный момент.</p>
+                        </div>
+                    </div>
+                    <div class="text-block__image"><img src="@img/blog/01.jpg" alt="" loading="lazy"></div>
+                </div>
+            </section>
+
+            @@include('html/_works.htm',{})
+
+            @@include('html/_submit.htm',{})
+
+            @@include('html/_best.htm',{
+            "title":"Отзывы молодоженов"
+            })
+
+            @@include('html/_contacts.htm',{})
+
+            <!--
+				<section class="test">
+					<div class="test__container">
+						<div class="test__body">
+
+						</div>
+					</div>
+				</section>
+			-->
+
+        </main>
+        @@include('html/_footer.htm',{})
+        @@include('html/_popup.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

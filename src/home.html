@@ -15,17 +15,25 @@
 						<h1 class="hero__title">GOld vision group</h1>
 						<p class="hero__subtitle title-second">запечатлим ваш самый важный день</p>
 
-						<a href="#" class="hero__button button">Заказать видеосъемку</a>
+						<a href="#" class="hero__button button" data-popup="#popup">Заказать видеосъемку</a>
 					</div>
 				</div>
 				<div class="hero__bg-ibg"><img src="@img/hero/01.jpg" alt=""></div>
+				<!-- <div class="hero__video-ibg">
+					<video autoplay="" loop="" muted="" playsinline="">
+						<source class="hero__video-ibg-mob" src="files/video.webm" type="video/mp4" media="(max-width:991px)">
+						<source class="hero__video-ibg-pc" src="files/video.webm" type="video/mp4">&gt;
+					</video>
+				</div> -->
 			</section>
 
 			@@include('html/_works.htm',{})
 
 			@@include('html/_directions.htm',{})
 
-			@@include('html/_best.htm',{})
+			@@include('html/_best.htm',{
+			"title":"с нами работают лучшие"
+			})
 
 			@@include('html/_stages.htm',{})
 
@@ -49,6 +57,7 @@
 
 		</main>
 		@@include('html/_footer.htm',{})
+		@@include('html/_popup.htm',{})
 	</div>
 	@@include('html/_js.htm',{})
 </body>

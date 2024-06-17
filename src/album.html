@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Фотоальбомы"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="hero">
+                <div class="hero__container">
+                    <div class="hero__body">
+                        <h1 class="hero__title">фотосъемка</h1>
+                        <p class="hero__subtitle title-second">печать фотоальбомов</p>
+
+                        <a href="#" class="hero__button button" data-popup="#popup">Заказать фотоальбом</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="album">
+                <div class="album__container">
+                    <h2 class="album__title title title_center">Наши альбомы</h2>
+                    <div class="album__row">
+                        <div class="album__col">
+                            <img data-fancybox="groop_1" src="@img/blog/01.jpg" alt="" loading="lazy">
+                            <img data-fancybox="groop_1" src="@img/works/02.jpg" alt="" loading="lazy">
+                            <img data-fancybox="groop_1" src="@img/blog/01.jpg" alt="" loading="lazy">
+
+                        </div>
+                        <div class="album__col">
+                            <img data-fancybox="groop_1" src="@img/hero/01.jpg" alt="" loading="lazy">
+                            <img data-fancybox="groop_1" src="@img/works/03.jpg" alt="" loading="lazy">
+                            <img data-fancybox="groop_1" src="@img/works/04.jpg" alt="" loading="lazy">
+                            <img data-fancybox="groop_1" src="@img/blog/01.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="album__col">
+                            <img data-fancybox="groop_1" src="@img/works/02.jpg" alt="" loading="lazy">
+                            <img data-fancybox="groop_1" src="@img/blog/01.jpg" alt="" loading="lazy">
+                            <img data-fancybox="groop_1" src="@img/blog/01.jpg" alt="" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="directions">
+                <div class="directions__container">
+                    <h2 class="directions__title title title_center">Фотоальбом Хранит ваши Воспоминания</h2>
+                    <div class="directions__items step">
+                        <a href="#" class="directions__item item-directions">
+                            <h3 class="item-directions__title title-second">личный и уникальный</h3>
+                            <div class="item-directions__text text">
+                                <p>Каждый фотоальбом уникален и персонализирован. Он отражает вашу индивидуальность и стиль, создавая уникальную историю вашей жизни или особенного события.</p>
+                            </div>
+                        </a>
+                        <a href="#" class="directions__item item-directions">
+                            <h3 class="item-directions__title title-second">семейная память</h3>
+                            <div class="item-directions__text text">
+                                <p>Фотоальбомы часто передаются из поколения в поколение, становясь ценными семейными реликвиями. Они позволяют сохранить семейную историю и делиться ею с детьми и внуками.</p>
+                            </div>
+                        </a>
+                        <a href="#" class="directions__item item-directions">
+                            <h3 class="item-directions__title title-second">теплые воспоминания </h3>
+                            <div class="item-directions__text text">
+                                <p>Пересматривая фотоальбомы, вы переживаете радостные моменты заново. Это может быть особенно ценно в трудные времена, когда воспоминания о счастливых событиях приносят утешение и радость.</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+
+            @@include('html/_submit.htm',{})
+
+            @@include('html/_contacts.htm',{})
+
+            <!--
+				<section class="test">
+					<div class="test__container">
+						<div class="test__body">
+
+						</div>
+					</div>
+				</section>
+			-->
+
+        </main>
+        @@include('html/_footer.htm',{})
+        @@include('html/_popup.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

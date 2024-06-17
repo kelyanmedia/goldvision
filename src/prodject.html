@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Наши проекты"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="hero">
+                <div class="hero__container">
+                    <div class="hero__body">
+                        <h1 class="hero__title">GOld vision group</h1>
+                        <p class="hero__subtitle title-second">НАШИ проекты</p>
+
+                        <a href="#" class="hero__button button" data-popup="#popup">ОБСУДИТЬ ПРОЕКТ</a>
+                    </div>
+                </div>
+                <div class="hero__bg-ibg"><img src="@img/hero/01.jpg" alt=""></div>
+            </section>
+
+            @@include('html/_works.htm',{})
+            @@include('html/_works.htm',{})
+            @@include('html/_works.htm',{})
+
+            @@include('html/_submit.htm',{})
+
+            @@include('html/_clients.htm',{})
+
+            @@include('html/_contacts.htm',{})
+
+            <!--
+				<section class="test">
+					<div class="test__container">
+						<div class="test__body">
+
+						</div>
+					</div>
+				</section>
+			-->
+
+        </main>
+        @@include('html/_footer.htm',{})
+        @@include('html/_popup.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
